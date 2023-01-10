@@ -15,7 +15,7 @@ export class SearchComponent {
 
   submitForm() {
     this.movieApiService
-      .searchMovieData(this.searchForm.value)
+      .getSearchedMovies(this.searchForm.value)
       .subscribe((result) => {
         this.searchResult = result.results;
       });
